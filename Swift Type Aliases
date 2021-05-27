@@ -1,3 +1,0 @@
-typealias feet = UInt8
-var distance: feet = 6
-print("Distamce is ", distance, "feet.")
