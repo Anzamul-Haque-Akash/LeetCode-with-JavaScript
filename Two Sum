@@ -1,16 +1,22 @@
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        index = []
-        flag = False
 
-        for i in range(len(nums)):
-            temp1 = target - nums[i]
-            for j in range(i+1, len(nums)):
-                if temp1 == nums[j]:
-                    index.append(i)
-                    index.append(j)
-                    flag = True
-                    break
-            if flag:
-                break
-        return index
+var twoSum = function(nums, target) {
+    
+    var flag = false;
+    var ans = [];
+    
+    for (var i = 0; i<nums.length; i++){
+        var temp = target - nums[i];
+        
+        for (var j = 0; j<nums.length; i++){
+            if(nums[i] == temp){
+                flag = true;
+                ans[0] = i;
+                ans[1] = j;
+                break;
+            }
+        }
+        
+        if(flag == true){
+            break;
+        }
+    }
