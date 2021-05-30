@@ -1,14 +1,19 @@
-
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
 var twoSum = function(nums, target) {
     
     var flag = false;
     var ans = [];
     
     for (var i = 0; i<nums.length; i++){
+        
         var temp = target - nums[i];
         
-        for (var j = 0; j<nums.length; i++){
-            if(nums[i] == temp){
+        for (var j = 0; j<nums.length; j++){
+            if(nums[j] == temp && i != j){
                 flag = true;
                 ans[0] = i;
                 ans[1] = j;
@@ -20,3 +25,6 @@ var twoSum = function(nums, target) {
             break;
         }
     }
+    
+    return ans;
+};
