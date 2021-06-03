@@ -1,0 +1,17 @@
+/**
+ * @param {number} x
+ * @return {number}
+ */
+var reverse = function(x) {
+    let num = 0, temp = 0;
+    while (x!=0) {
+       temp = x % 10; 
+       x = parseInt(x/10);
+       num = (num * 10) + temp;
+    }
+    
+    if(num < -2147483648 || num > 2147483647){
+       return 0;
+    }
+    return num;
+};
